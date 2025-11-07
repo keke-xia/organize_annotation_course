@@ -6,8 +6,7 @@ library(data.table)
 
 # get data from parameter
 
-#data <- "assembly.fasta.mod.EDTA.anno/assembly.fasta.mod.out.landscape.Div.Rname.tab"
-data <- "/data/users/kxia/organize_annotation_course/results/EDTA_annotation/assembly.fasta.mod.EDTA.anno/assembly.fasta.mod.out.landscape.Div.Rname.tab"
+data <- "assembly.fasta.mod.EDTA.anno/assembly.fasta.mod.out.landscape.Div.Rname.tab"
 
 rep_table <- fread(data, header = FALSE, sep = "\t")
 rep_table %>% head()
@@ -52,8 +51,7 @@ ggplot(rep_table.m, aes(fill = fam, x = distance, weight = value / 1000000)) +
   ylab("Sequence (Mbp)") +
   theme(axis.text.x = element_text(angle = 90, vjust = 1, size = 9, hjust = 1), plot.title = element_text(hjust = 0.5))
 
-ggsave(filename = "/data/users/kxia/organize_annotation_course/results/TE_dynamics/Plots/output.pdf",
-       width = 10, height = 5, useDingbats = FALSE)
+ggsave(filename = "Plots/output.pdf", width = 10, height = 5, useDingbats = F)
 
 
 
