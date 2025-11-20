@@ -5,3 +5,4 @@
 !.gitignore
 !scripts/
 !scripts/**
+!*Organization_genome_annotation_plots.pdf
